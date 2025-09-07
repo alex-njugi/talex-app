@@ -11,8 +11,7 @@ import SocialLinks from "@/components/ui/SocialLinks";
 import ProductCard from "@/components/product/ProductCard";
 import { PShieldCheck, PTruck, PStore, PMapPin } from "@/components/ui/icons";
 
-const HERO_POSTER =
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80";
+
 const HERO_VIDEO_MP4 = "/media/talex-hero.mp4";
 const HERO_VIDEO_WEBM = "/media/talex-hero.webm";
 
@@ -33,7 +32,7 @@ export default function Home() {
             loop
             playsInline
             preload="metadata"
-            poster={HERO_POSTER}
+            poster={HERO_VIDEO_MP4 }
             aria-hidden="true"
           >
             <source src={HERO_VIDEO_WEBM} type="video/webm" />
@@ -42,7 +41,7 @@ export default function Home() {
 
           {/* Reduced-motion & very-low-end fallback */}
           <img
-            src={HERO_POSTER}
+            src={HERO_VIDEO_MP4 }
             alt=""
             className="block motion-safe:hidden h-[580px] w-full object-cover object-[center_35%]"
             loading="eager"

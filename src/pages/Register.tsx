@@ -225,7 +225,7 @@ export default function Register() {
 
               <div className="mt-8 overflow-hidden rounded-2xl border bg-white/80">
                 <img
-                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80"
+                  src="/images/wow.png"
                   alt="Talex automotive"
                   className="w-full h-64 object-cover"
                   loading="lazy"
