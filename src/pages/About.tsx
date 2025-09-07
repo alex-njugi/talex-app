@@ -3,17 +3,16 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/ui/Section";
 import SocialLinks from "@/components/ui/SocialLinks";
 import { BRAND } from "@/lib/brand";
+import { Wrench, Award } from "lucide-react"; // keep these two from lucide
 import {
-  ShieldCheck,
-  Truck,
-  Wrench,
-  Award,
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Smartphone,
-} from "lucide-react";
+  PShieldCheck,
+  PTruck,
+  PMapPin,
+  PPhone,
+  PMail,
+  PClock,
+  PMobile,
+} from "@/components/ui/icons"; // premium duotone set
 import { Link } from "react-router-dom";
 
 const HERO_IMAGE =
@@ -22,7 +21,7 @@ const HERO_IMAGE =
 export default function About() {
   return (
     <>
-      {/* HERO — cleaner, welcoming, no white fade or M-Pesa emphasis */}
+      {/* HERO — clean, premium, no white fade */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -30,7 +29,7 @@ export default function About() {
             alt=""
             className="h-[440px] w-full object-cover object-center"
           />
-          {/* dark overlay only for contrast */}
+          {/* darker overlay only for crisp contrast */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/50 to-transparent" />
         </div>
 
@@ -55,7 +54,11 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-              <Link to="/shop" className="btn-primary rounded-xl px-5 py-2.5">
+              <Link
+                to="/shop"
+                className="btn-primary rounded-xl px-5 py-2.5"
+                aria-label="Shop all products"
+              >
                 Shop Now
               </Link>
               <a
@@ -63,6 +66,7 @@ export default function About() {
                 target="_blank"
                 rel="noreferrer"
                 className="btn-outline rounded-xl px-5 py-2.5"
+                title="Open our store location in Google Maps"
               >
                 Visit Our Store
               </a>
@@ -119,15 +123,15 @@ export default function About() {
 
             <ul className="mt-4 space-y-2 text-gray-700">
               <li className="flex gap-2">
-                <ShieldCheck className="h-5 w-5 text-brand mt-0.5" />
+                <PShieldCheck className="h-5 w-5 text-brand" aria-hidden="true" />
                 Quality and warranty-backed items
               </li>
               <li className="flex gap-2">
-                <Truck className="h-5 w-5 text-brand mt-0.5" />
+                <PTruck className="h-5 w-5 text-brand" aria-hidden="true" />
                 Fast local delivery & clear ETAs
               </li>
               <li className="flex gap-2">
-                <Wrench className="h-5 w-5 text-brand mt-0.5" />
+                <Wrench className="h-5 w-5 text-brand" aria-hidden="true" />
                 Practical advice for compatibility & use
               </li>
             </ul>
@@ -138,6 +142,7 @@ export default function About() {
               src="https://images.unsplash.com/photo-1542367597-8849eb96105a?auto=format&fit=crop&w=1400&q=80"
               alt="Talex car accessories"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -147,7 +152,7 @@ export default function About() {
       <Section title="Why Choose Talex" subtitle="What sets us apart">
         <div className="grid gap-4 md:grid-cols-3">
           <div className="card-soft p-5">
-            <Award className="h-5 w-5 text-brand" />
+            <Award className="h-5 w-5 text-brand" aria-hidden="true" />
             <div className="mt-2 font-semibold">Curated Quality</div>
             <p className="text-gray-700 text-sm">
               We source reputable brands and back them with a simple{" "}
@@ -155,15 +160,15 @@ export default function About() {
             </p>
           </div>
           <div className="card-soft p-5">
-            <Truck className="h-5 w-5 text-brand" />
+            <PTruck className="h-5 w-5 text-brand" aria-hidden="true" />
             <div className="mt-2 font-semibold">Fast & Clear Delivery</div>
             <p className="text-gray-700 text-sm">
-              Nairobi same-day (cut-off 3pm), upcountry in 1–3 days via
-              trusted couriers.
+              Nairobi same-day (cut-off 3pm), upcountry in 1–3 days via trusted
+              couriers.
             </p>
           </div>
           <div className="card-soft p-5">
-            <ShieldCheck className="h-5 w-5 text-mpesa" />
+            <PShieldCheck className="h-5 w-5 text-mpesa" aria-hidden="true" />
             <div className="mt-2 font-semibold">M-Pesa First</div>
             <p className="text-gray-700 text-sm">
               Seamless Lipa na M-Pesa Till checkout with secure STK push and
@@ -178,7 +183,7 @@ export default function About() {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="card-soft p-6 space-y-3">
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-brand mt-0.5" />
+              <PMapPin className="h-5 w-5 text-brand" aria-hidden="true" />
               <div>
                 <div className="font-semibold">Address</div>
                 <a
@@ -193,7 +198,7 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Clock className="h-5 w-5 text-brand mt-0.5" />
+              <PClock className="h-5 w-5 text-brand" aria-hidden="true" />
               <div>
                 <div className="font-semibold">Store Hours</div>
                 <div className="text-gray-700 text-sm">Mon–Sat: 7:00am – 5:00pm</div>
@@ -202,7 +207,7 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Phone className="h-5 w-5 text-brand mt-0.5" />
+              <PPhone className="h-5 w-5 text-brand" aria-hidden="true" />
               <div>
                 <div className="font-semibold">Phone</div>
                 <a
@@ -215,7 +220,7 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Mail className="h-5 w-5 text-brand mt-0.5" />
+              <PMail className="h-5 w-5 text-brand" aria-hidden="true" />
               <div>
                 <div className="font-semibold">Email</div>
                 <a
@@ -253,11 +258,11 @@ export default function About() {
                 rel="noreferrer"
                 className="btn-outline rounded-xl px-5 py-2.5 inline-flex items-center gap-2"
               >
-                <MapPin className="h-4 w-4" />
+                <PMapPin className="h-4 w-4" aria-hidden="true" />
                 Find Us
               </a>
               <span className="pill-mpesa inline-flex">
-                <Smartphone className="h-4 w-4 text-mpesa" />
+                <PMobile className="h-4 w-4 text-mpesa" aria-hidden="true" />
                 M-Pesa Till Ready
               </span>
             </div>

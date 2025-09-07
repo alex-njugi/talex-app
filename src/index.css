@@ -35,3 +35,12 @@ html, body, #root { height: 100%; }
   50%  { transform: translateX(20%); }
   100% { transform: translateX(110%); }
 }
+
+/* Mobile polish */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+html { -webkit-text-size-adjust: 100%; }
+@supports(padding:max(0px)) {
+  .safe-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+}

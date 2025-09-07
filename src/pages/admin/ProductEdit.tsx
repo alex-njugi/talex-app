@@ -81,8 +81,8 @@ export default function AdminProductEdit() {
                 className="input"
                 type="number"
                 min={0}
-                value={form.price_cents / 100}
-                onChange={(e) => set("price_cents", Math.round(Number(e.target.value) * 100))}
+                value={form.price_cents }
+                onChange={(e) => set("price_cents", Math.round(Number(e.target.value) ))}
               />
               <input
                 className="input"
